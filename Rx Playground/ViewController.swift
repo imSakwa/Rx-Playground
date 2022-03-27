@@ -13,17 +13,24 @@ import Then
 
 class ViewController: UIViewController {
 
-    private let listTableView = UITableView()
+    private let listTableView = UITableView(frame: .zero, style: .insetGrouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.view.backgroundColor = .white
         
         listTableView.delegate = self
         listTableView.dataSource = self
         listTableView.register(ListTableViewCell.self, forCellReuseIdentifier: "listCell")
         
+        setLayout()
+    }
+    
+    private func setLayout() {
+        self.view.addSubview(listTableView)
+        listTableView.snp.makeConstraints {
+            $0.size.edges.equalToSuperview()
+        }
     }
 }
 
