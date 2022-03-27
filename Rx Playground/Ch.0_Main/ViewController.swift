@@ -13,11 +13,29 @@ import Then
 
 class ViewController: UIViewController {
 
+    private let naviBarView = UIView().then {
+        $0.backgroundColor = .systemGray6
+    }
+    
+    private let titleLbl = UILabel().then {
+        $0.text = "RxSwift Playground"
+        $0.font = .boldSystemFont(ofSize: 22)
+    }
+    
+    private let addBtn = UIButton().then {
+        $0.setImage(UIImage(systemName: "plus"), for: .normal)
+        $0.setPreferredSymbolConfiguration(.init(pointSize: 22, weight: .regular, scale: .default), forImageIn: .normal)
+        $0.addTarget(self, action: #selector(clickAddBtn), for: .touchUpInside)
+        $0.contentMode = .scaleAspectFill
+        $0.tintColor = .black
+    }
+    
     private let listTableView = UITableView(frame: .zero, style: .insetGrouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemGray6
+        self.navigationController?.navigationBar.isHidden = true
         
         listTableView.delegate = self
         listTableView.dataSource = self
@@ -26,10 +44,36 @@ class ViewController: UIViewController {
         setLayout()
     }
     
+    // 리스트 추가하기 (근데 왜 만들었지..?)
+    @objc private func clickAddBtn(_ sender: UIButton) {
+        print("clicked!!!")
+    }
+    
     private func setLayout() {
+        self.view.addSubview(naviBarView)
+        naviBarView.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(44)
+        }
+        
+        naviBarView.addSubview(titleLbl)
+        titleLbl.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().inset(16)
+        }
+        
+        naviBarView.addSubview(addBtn)
+        addBtn.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(16)
+            $0.size.equalTo(24)
+        }
+        
         self.view.addSubview(listTableView)
         listTableView.snp.makeConstraints {
-            $0.size.edges.equalToSuperview()
+            $0.top.equalTo(naviBarView.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
 }
@@ -42,12 +86,12 @@ extension ViewController: UITableViewDelegate {
         case 1:
             return "이론"
         default:
-            return "생각하지 못한 섹션.."
+            return ""
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
