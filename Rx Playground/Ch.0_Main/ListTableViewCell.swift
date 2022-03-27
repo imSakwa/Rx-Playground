@@ -12,7 +12,12 @@ import Then
 class ListTableViewCell: UITableViewCell {
     
     let titleLbl = UILabel().then {
-        $0.font = .boldSystemFont(ofSize: 15)
+        $0.font = .boldSystemFont(ofSize: 16)
+    }
+    
+    let arrowIcon = UIImageView().then {
+        $0.image = UIImage(systemName: "chevron.right")
+        $0.tintColor = .black
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -30,6 +35,13 @@ class ListTableViewCell: UITableViewCell {
         titleLbl.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().inset(10)
+        }
+        
+        self.contentView.addSubview(arrowIcon)
+        arrowIcon.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.greaterThanOrEqualTo(titleLbl.snp.trailing).offset(10)
+            $0.trailing.equalToSuperview().inset(10)
         }
     }
 }
