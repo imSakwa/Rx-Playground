@@ -13,6 +13,10 @@ import Then
 
 class ViewController: UIViewController {
 
+    let itemArr: [String] = [
+        "1. Github",
+    ]
+    
     private let naviBarView = UIView().then {
         $0.backgroundColor = .systemGray6
     }
@@ -21,15 +25,7 @@ class ViewController: UIViewController {
         $0.text = "RxSwift Playground"
         $0.font = .boldSystemFont(ofSize: 22)
     }
-    
-    private let addBtn = UIButton().then {
-        $0.setImage(UIImage(systemName: "plus"), for: .normal)
-        $0.setPreferredSymbolConfiguration(.init(pointSize: 22, weight: .regular, scale: .default), forImageIn: .normal)
-        $0.addTarget(self, action: #selector(clickAddBtn), for: .touchUpInside)
-        $0.contentMode = .scaleAspectFill
-        $0.tintColor = .black
-    }
-    
+        
     private let listTableView = UITableView(frame: .zero, style: .insetGrouped)
     
     override func viewDidLoad() {
@@ -44,11 +40,6 @@ class ViewController: UIViewController {
         setLayout()
     }
     
-    // 리스트 추가하기 (근데 왜 만들었지..?)
-    @objc private func clickAddBtn(_ sender: UIButton) {
-        print("clicked!!!")
-    }
-    
     private func setLayout() {
         self.view.addSubview(naviBarView)
         naviBarView.snp.makeConstraints {
@@ -61,13 +52,6 @@ class ViewController: UIViewController {
         titleLbl.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().inset(16)
-        }
-        
-        naviBarView.addSubview(addBtn)
-        addBtn.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(16)
-            $0.size.equalTo(24)
         }
         
         self.view.addSubview(listTableView)
@@ -92,10 +76,17 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        switch indexPath.row {
+        case 0:
+            let githubVC = GithubViewController()
+            self.navigationController?.pushViewController(githubVC, animated: true)
+        default:
+            break
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 }
 
@@ -107,7 +98,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         
-        cell.titleLbl.text = "가가가가ㅏ가가가가가가ㅏ가가가가ㅏ가가가가ㅏ가가가가ㅏ가가가가ㅏㄱ"
+        cell.titleLbl.text = itemArr[indexPath.row]
         return cell
     }
     
