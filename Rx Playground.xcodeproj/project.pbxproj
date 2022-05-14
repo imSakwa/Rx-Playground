@@ -24,6 +24,7 @@
 		760C972D27F0B2270051F8BF /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		760C973127F0C0420051F8BF /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
+		76E3CA9A282FF2E900CB4F10 /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76ECD6EA27EF5D21002B473C /* Rx Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ECD6ED27EF5D21002B473C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76ECD6EF27EF5D21002B473C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 				76C0F8D4282D4F6200DBD019 /* Common */,
 				760C973027F0B4730051F8BF /* Ch.0_Main */,
 				760C972F27F0B42D0051F8BF /* Ch.1_Github */,
+				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
 			);
 			path = "Rx Playground";
 			sourceTree = "<group>";
