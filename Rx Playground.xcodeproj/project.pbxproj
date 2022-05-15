@@ -83,7 +83,6 @@
 		76ECD6E127EF5D21002B473C = {
 			isa = PBXGroup;
 			children = (
-				76E3CA9E283140F200CB4F10 /* TransformingOperators.playground */,
 				76ECD6EC27EF5D21002B473C /* Rx Playground */,
 				76ECD6EB27EF5D21002B473C /* Products */,
 				839F168B0876AA602583C36D /* Pods */,
@@ -110,6 +109,7 @@
 				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
 				76E3CA9C283133A900CB4F10 /* Subject.playground */,
 				76E3CA9D28313AD000CB4F10 /* FilteringOperators.playground */,
+				76E3CA9E283140F200CB4F10 /* TransformingOperators.playground */,
 			);
 			path = "Rx Playground";
 			sourceTree = "<group>";
