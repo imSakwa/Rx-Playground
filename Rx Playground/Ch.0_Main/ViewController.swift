@@ -40,6 +40,12 @@ class ViewController: UIViewController {
         setLayout()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     private func setLayout() {
         self.view.addSubview(naviBarView)
         naviBarView.snp.makeConstraints {
