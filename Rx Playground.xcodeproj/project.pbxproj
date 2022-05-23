@@ -13,6 +13,9 @@
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CA9F283676F300CB4F10 /* GithubListCell.swift */; };
 		76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA12837D6D000CB4F10 /* Repository.swift */; };
+		76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */; };
+		76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E69016283BC23B00248EC8 /* PhotoViewModel.swift */; };
+		76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E69018283BC27500248EC8 /* PrefetchTableViewCell.swift */; };
 		76ECD6EE27EF5D21002B473C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD6ED27EF5D21002B473C /* AppDelegate.swift */; };
 		76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD6EF27EF5D21002B473C /* SceneDelegate.swift */; };
 		76ECD6F227EF5D21002B473C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD6F127EF5D21002B473C /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 		76E3CA9E283140F200CB4F10 /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9F283676F300CB4F10 /* GithubListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubListCell.swift; sourceTree = "<group>"; };
 		76E3CAA12837D6D000CB4F10 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefetchViewController.swift; sourceTree = "<group>"; };
+		76E69016283BC23B00248EC8 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		76E69018283BC27500248EC8 /* PrefetchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefetchTableViewCell.swift; sourceTree = "<group>"; };
 		76ECD6EA27EF5D21002B473C /* Rx Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ECD6ED27EF5D21002B473C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76ECD6EF27EF5D21002B473C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */ = {
+			isa = PBXGroup;
+			children = (
+				76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */,
+				76E69016283BC23B00248EC8 /* PhotoViewModel.swift */,
+				76E69018283BC27500248EC8 /* PrefetchTableViewCell.swift */,
+			);
+			path = "Ch.0-1_Prefetch";
+			sourceTree = "<group>";
+		};
 		76ECD6E127EF5D21002B473C = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +126,7 @@
 				76ECD6FB27EF5D21002B473C /* Info.plist */,
 				76C0F8D4282D4F6200DBD019 /* Common */,
 				760C973027F0B4730051F8BF /* Ch.0_Main */,
+				76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */,
 				760C972F27F0B42D0051F8BF /* Ch.1_Github */,
 				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
 				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
@@ -254,11 +271,14 @@
 				76ECD6F227EF5D21002B473C /* ViewController.swift in Sources */,
 				76ECD6EE27EF5D21002B473C /* AppDelegate.swift in Sources */,
 				760C973227F0C0420051F8BF /* ListModel.swift in Sources */,
+				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
 				76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */,
+				76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */,
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
 				760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */,
+				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

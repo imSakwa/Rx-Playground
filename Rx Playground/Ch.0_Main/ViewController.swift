@@ -14,6 +14,7 @@ import Then
 class ViewController: UIViewController {
 
     let itemArr: [String] = [
+        "0. Prefetch",
         "1. Github",
     ]
     
@@ -84,6 +85,10 @@ extension ViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
+            let prefetchVC = PrefetchViewController()
+            self.navigationController?.pushViewController(prefetchVC, animated: true)
+            
+        case 1:
             let githubVC = GithubViewController()
             self.navigationController?.pushViewController(githubVC, animated: true)
         default:
