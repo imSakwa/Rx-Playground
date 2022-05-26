@@ -7,7 +7,15 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class PrefetchTableViewCell: UITableViewCell {
     static let identifier = "PrefetchTableViewCell"
+    var disposeBag = DisposeBag()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        disposeBag = DisposeBag()
+    }
 }
