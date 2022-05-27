@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 class PhotoViewModel {
-    var dataSource: UITableViewDiffableDataSource<Section, Photo>!
-    lazy var provider: Provider = Pro
+//    var dataSource: UITableViewDiffableDataSource<Section, Photo>!
+//    lazy var provider: Provider = Pro
 }
