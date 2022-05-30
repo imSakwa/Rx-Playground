@@ -14,7 +14,8 @@ import Then
 class ViewController: UIViewController {
 
     let itemArr: [String] = [
-        "0. Prefetch",
+        "0_1. Prefetch",
+        "0_2. Button",
         "1. Github",
     ]
     
@@ -89,6 +90,10 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(prefetchVC, animated: true)
             
         case 1:
+            let testButtonVC = TestButtonViewController()
+            self.navigationController?.pushViewController(testButtonVC, animated: true)
+            
+        case 2:
             let githubVC = GithubViewController()
             self.navigationController?.pushViewController(githubVC, animated: true)
         default:
@@ -103,7 +108,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itemArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

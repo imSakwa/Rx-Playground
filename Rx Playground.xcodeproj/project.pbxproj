@@ -11,6 +11,7 @@
 		760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C972D27F0B2270051F8BF /* ListTableViewCell.swift */; };
 		760C973227F0C0420051F8BF /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C973127F0C0420051F8BF /* ListModel.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
+		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CA9F283676F300CB4F10 /* GithubListCell.swift */; };
 		76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA12837D6D000CB4F10 /* Repository.swift */; };
 		76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */; };
@@ -29,6 +30,7 @@
 		760C972D27F0B2270051F8BF /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		760C973127F0C0420051F8BF /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
+		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E3CA9A282FF2E900CB4F10 /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9B28312A9200CB4F10 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9C283133A900CB4F10 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -92,6 +94,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		76E0D6CE2844D9DE00611955 /* Ch.0-2_Button */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */,
+			);
+			path = "Ch.0-2_Button";
+			sourceTree = "<group>";
+		};
 		76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				76C0F8D4282D4F6200DBD019 /* Common */,
 				760C973027F0B4730051F8BF /* Ch.0_Main */,
 				76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */,
+				76E0D6CE2844D9DE00611955 /* Ch.0-2_Button */,
 				760C972F27F0B42D0051F8BF /* Ch.1_Github */,
 				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
 				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
@@ -272,6 +283,7 @@
 				76ECD6EE27EF5D21002B473C /* AppDelegate.swift in Sources */,
 				760C973227F0C0420051F8BF /* ListModel.swift in Sources */,
 				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
+				76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */,
 				76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */,
 				76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */,
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
