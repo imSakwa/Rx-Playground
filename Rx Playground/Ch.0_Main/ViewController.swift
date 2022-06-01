@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     let itemArr: [String] = [
         "0_1. Prefetch",
-        "0_2. Button",
+        "0_2. Views & Control",
         "1. Github",
     ]
     

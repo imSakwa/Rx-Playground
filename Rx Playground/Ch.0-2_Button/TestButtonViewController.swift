@@ -39,6 +39,18 @@ class TestButtonViewController: UIViewController {
         $0.textColor = .black
     }
     
+    let rxTextField = UITextField().then {
+        $0.backgroundColor = .systemGray
+    }
+    
+    let rxControlField = UITextField().then {
+        $0.backgroundColor = .systemGray
+    }
+    
+    let rxObserveField = UITextField().then {
+        $0.backgroundColor = .systemGray
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,6 +91,32 @@ class TestButtonViewController: UIViewController {
             .bind(to: self.countLbl2.rx.isHidden)
             .disposed(by: disposeBag)
         
+        
+        
+        // rx.text => 처음 포커스 될 때에도 이벤트가 방출된다.
+        self.rxTextField.rx.text.orEmpty
+            .asObservable()
+            .subscribe(onNext: { value in
+                print("rx.text 입력 : \(value)")
+            })
+            .disposed(by: disposeBag)
+        
+        // rx.Control => 이벤트는 방출되어도 textField 값은 못받음?
+        self.rxControlField.rx.controlEvent(.editingChanged)
+            .asObservable()
+            .subscribe(onNext: { value in
+                print("rx.Control 입력 : \(value)")
+            })
+            .disposed(by: disposeBag)
+        
+        // rx.Observe => 포커싱 해제시 한번에 이벤트 방출
+        self.rxObserveField.rx.observe(String.self, "text")
+            .asObservable()
+            .subscribe(onNext: { value in
+                print("rx.Observe 입력 : \(value)")
+            })
+            .disposed(by: disposeBag)
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -95,7 +133,12 @@ class TestButtonViewController: UIViewController {
         
         view.addSubview(countLbl2)
         view.addSubview(button2)
+        
+        view.addSubview(rxTextField)
+        view.addSubview(rxControlField)
+        view.addSubview(rxObserveField)
     }
+    
     private func setupConstraint() {
         countLbl.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
@@ -116,6 +159,27 @@ class TestButtonViewController: UIViewController {
         button2.snp.makeConstraints {
             $0.top.equalTo(countLbl2.snp.bottom).offset(10)
             $0.centerX.equalTo(countLbl2)
+            $0.height.equalTo(30)
+        }
+        
+        rxTextField.snp.makeConstraints {
+            $0.top.equalTo(button.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(200)
+            $0.height.equalTo(30)
+        }
+        
+        rxControlField.snp.makeConstraints {
+            $0.top.equalTo(rxTextField.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(200)
+            $0.height.equalTo(30)
+        }
+        
+        rxObserveField.snp.makeConstraints {
+            $0.top.equalTo(rxControlField.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(200)
             $0.height.equalTo(30)
         }
     }
