@@ -12,6 +12,12 @@
 		760C973227F0C0420051F8BF /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C973127F0C0420051F8BF /* ListModel.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
+		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
+		76E0D6D6284CECA200611955 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D5284CECA200611955 /* SearchBar.swift */; };
+		76E0D6D8284CF09F00611955 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D7284CF09F00611955 /* FilterView.swift */; };
+		76E0D6DA284CF40200611955 /* BlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D9284CF40200611955 /* BlogList.swift */; };
+		76E0D6DC284CF42100611955 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6DB284CF42100611955 /* BlogListCellData.swift */; };
+		76E0D6E0284CF47400611955 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6DF284CF47400611955 /* BlogListCell.swift */; };
 		76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CA9F283676F300CB4F10 /* GithubListCell.swift */; };
 		76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA12837D6D000CB4F10 /* Repository.swift */; };
 		76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */; };
@@ -32,6 +38,12 @@
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumMainViewController.swift; sourceTree = "<group>"; };
+		76E0D6D5284CECA200611955 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		76E0D6D7284CF09F00611955 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		76E0D6D9284CF40200611955 /* BlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogList.swift; sourceTree = "<group>"; };
+		76E0D6DB284CF42100611955 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
+		76E0D6DF284CF47400611955 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		76E3CA9A282FF2E900CB4F10 /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9B28312A9200CB4F10 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9C283133A900CB4F10 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -106,8 +118,30 @@
 		76E0D6D1284BA6C300611955 /* Ch.2_Daum */ = {
 			isa = PBXGroup;
 			children = (
+				76E0D6DE284CF43000611955 /* Entities */,
+				76E0D6DD284CF42800611955 /* Presentation */,
 			);
 			path = Ch.2_Daum;
+			sourceTree = "<group>";
+		};
+		76E0D6DD284CF42800611955 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */,
+				76E0D6D5284CECA200611955 /* SearchBar.swift */,
+				76E0D6D7284CF09F00611955 /* FilterView.swift */,
+				76E0D6D9284CF40200611955 /* BlogList.swift */,
+				76E0D6DF284CF47400611955 /* BlogListCell.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		76E0D6DE284CF43000611955 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D6DB284CF42100611955 /* BlogListCellData.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */ = {
@@ -292,14 +326,20 @@
 				76ECD6F227EF5D21002B473C /* ViewController.swift in Sources */,
 				76ECD6EE27EF5D21002B473C /* AppDelegate.swift in Sources */,
 				760C973227F0C0420051F8BF /* ListModel.swift in Sources */,
+				76E0D6E0284CF47400611955 /* BlogListCell.swift in Sources */,
 				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
+				76E0D6DC284CF42100611955 /* BlogListCellData.swift in Sources */,
 				76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */,
 				76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */,
 				76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */,
+				76E0D6D6284CECA200611955 /* SearchBar.swift in Sources */,
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
+				76E0D6DA284CF40200611955 /* BlogList.swift in Sources */,
+				76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
 				760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */,
+				76E0D6D8284CF09F00611955 /* FilterView.swift in Sources */,
 				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

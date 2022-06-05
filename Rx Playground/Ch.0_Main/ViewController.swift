@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         "0_1. Prefetch",
         "0_2. Views & Control",
         "1. Github",
+        "2. Daum"
     ]
     
     private let naviBarView = UIView().then {
@@ -96,6 +97,10 @@ extension ViewController: UITableViewDelegate {
         case 2:
             let githubVC = GithubViewController()
             self.navigationController?.pushViewController(githubVC, animated: true)
+            
+        case 3:
+            let daumVC = DaumMainViewController()
+            self.navigationController?.pushViewController(daumVC, animated: true)
         default:
             break
         }
