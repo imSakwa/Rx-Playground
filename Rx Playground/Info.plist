@@ -5,14 +5,8 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string></string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-		</dict>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>kakaocfa067fccf544de286a6b21b5676ab31</string>

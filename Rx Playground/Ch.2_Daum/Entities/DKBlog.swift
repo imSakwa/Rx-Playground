@@ -8,7 +8,7 @@
 import Foundation
 
 struct DKBlog: Decodable {
-    let document: [DKDocument]
+    let documents: [DKDocument]
 }
 
 struct DKDocument: Decodable {
