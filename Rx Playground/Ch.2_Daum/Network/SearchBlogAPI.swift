@@ -19,7 +19,8 @@ struct SearchBlogAPI {
         components.path = SearchBlogAPI.path
         
         components.queryItems = [
-            URLQueryItem(name: "query", value: query)
+            URLQueryItem(name: "query", value: query),
+            URLQueryItem(name: "size", value: "20")
         ]
         
         return components

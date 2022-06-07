@@ -9,6 +9,7 @@ import Foundation
 
 struct DKBlog: Decodable {
     let documents: [DKDocument]
+    let meta: [DKMeta]
 }
 
 struct DKDocument: Decodable {
@@ -51,5 +52,22 @@ extension Date {
         }
         
         return nil
+    }
+}
+
+struct DKMeta: Decodable {
+    let is_end: Bool?
+    let pageable_count: Int?
+    let total_count: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case is_end, pageable_count, total_count
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.is_end = try? values.decode(Bool?.self, forKey: .is_end)
+  
     }
 }
