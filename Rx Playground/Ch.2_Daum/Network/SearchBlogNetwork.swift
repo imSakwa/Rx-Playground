@@ -22,8 +22,8 @@ class SearchBlogNetwork {
         self.session = session
     }
     
-    func searchBlog(query: String) -> Single<Result<DKBlog, SearchNetworkError>> {
-        guard let url = api.searchBlog(query: query).url else { return .just(.failure(.invalidURL))
+    func searchBlog(query: String, page: Int = 1) -> Single<Result<DKBlog, SearchNetworkError>> {
+        guard let url = api.searchBlog(query: query, page: page).url else { return .just(.failure(.invalidURL))
         }
         
         let request = NSMutableURLRequest(url: url)

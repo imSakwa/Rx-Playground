@@ -12,7 +12,7 @@ struct SearchBlogAPI {
     static let host = "dapi.kakao.com"
     static let path = "/v2/search/blog"
     
-    func searchBlog(query: String) -> URLComponents {
+    func searchBlog(query: String, page: Int) -> URLComponents {
         var components = URLComponents()
         components.scheme = SearchBlogAPI.scheme
         components.host = SearchBlogAPI.host
@@ -20,6 +20,7 @@ struct SearchBlogAPI {
         
         components.queryItems = [
             URLQueryItem(name: "query", value: query),
+            URLQueryItem(name: "page", value: String(page)),
             URLQueryItem(name: "size", value: "20")
         ]
         

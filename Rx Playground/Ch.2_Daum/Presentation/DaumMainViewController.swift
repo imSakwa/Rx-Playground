@@ -12,10 +12,12 @@ import RxCocoa
 class DaumMainViewController: UIViewController {
     let disposeBag = DisposeBag()
     
-     let listView = BlogListView()
-     let searchBar = SearchBar()
+    private let listView = BlogListView()
+    private let searchBar = SearchBar()
     
-    let alertActionTapped = PublishRelay<AlertAction>()
+    private let alertActionTapped = PublishRelay<AlertAction>()
+    
+    private var currentPage: Int = 2
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -57,6 +59,19 @@ class DaumMainViewController: UIViewController {
                         let thumbnailURL = URL(string: doc.thumbnail ?? "")
                         return BlogListCellData(thumnailURL: thumbnailURL, name: doc.name, title: doc.title, datetime: doc.datetime)
                     }
+            }
+        
+        let currentPage = blogValue
+            .map { blog -> Int in
+                return blog.meta.pageCnt ?? -1
+            }
+        
+        listView.rx.prefetchRows
+            .compactMap(\.last?.row)
+            .withUnretained(self)
+            .bind { ss, row in
+//                guard row == cellData.count - 1 else { return }
+                SearchBlogNetwork().searchBlog(query: "Rxswift", page: 2)
             }
         
         // FilterView를 선택했을 때 나오는 alertSheet를 선택했을 때 type
