@@ -29,7 +29,7 @@ class DaumMainViewController: UIViewController {
         fatalError("에러")
     }
     
-    func bind(_ viewModel: MainViewModel) {
+    func bind(_ viewModel: DaumMainViewModel) {
         listView.bind(viewModel.blogListViewModel)
         searchBar.bind(viewModel.searchBarViewModel)
         

@@ -13,8 +13,20 @@
 		76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */; };
 		76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A328559E20003D2D6A /* FilterViewModel.swift */; };
 		76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A628559E7D003D2D6A /* BlogListViewModel.swift */; };
-		76A183A928559F03003D2D6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A828559F03003D2D6A /* MainViewModel.swift */; };
-		76A183AC2855A121003D2D6A /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183AB2855A121003D2D6A /* MainModel.swift */; };
+		76A183A928559F03003D2D6A /* DaumMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A828559F03003D2D6A /* DaumMainViewModel.swift */; };
+		76A183AC2855A121003D2D6A /* DaumMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183AB2855A121003D2D6A /* DaumMainModel.swift */; };
+		76A183AE2855A43D003D2D6A /* MainVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183AD2855A43D003D2D6A /* MainVIewController.swift */; };
+		76A183B02855A462003D2D6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183AF2855A462003D2D6A /* MainViewModel.swift */; };
+		76A183B32855A6AF003D2D6A /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183B22855A6AF003D2D6A /* TitleTextFieldCell.swift */; };
+		76A183B52855A6BB003D2D6A /* TitleTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183B42855A6BB003D2D6A /* TitleTextFieldViewModel.swift */; };
+		76A183B82855A7D6003D2D6A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183B72855A7D6003D2D6A /* Category.swift */; };
+		76A183BC2855A800003D2D6A /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183BB2855A800003D2D6A /* CategoryViewModel.swift */; };
+		76A183BE2855A93E003D2D6A /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183BD2855A93E003D2D6A /* CategoryListViewController.swift */; };
+		76A183C12855AB10003D2D6A /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183C02855AB10003D2D6A /* PriceTextFieldCellViewModel.swift */; };
+		76A183C32855AE7C003D2D6A /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183C22855AE7C003D2D6A /* PriceTextFieldCell.swift */; };
+		76A183C62855B328003D2D6A /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183C52855B328003D2D6A /* DetailWriteFormCell.swift */; };
+		76A183C82855B331003D2D6A /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183C72855B331003D2D6A /* DetailWriteFormCellViewModel.swift */; };
+		76A183CB2855B702003D2D6A /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183CA2855B702003D2D6A /* MainModel.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
@@ -47,8 +59,20 @@
 		76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		76A183A328559E20003D2D6A /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		76A183A628559E7D003D2D6A /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
-		76A183A828559F03003D2D6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		76A183AB2855A121003D2D6A /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		76A183A828559F03003D2D6A /* DaumMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumMainViewModel.swift; sourceTree = "<group>"; };
+		76A183AB2855A121003D2D6A /* DaumMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumMainModel.swift; sourceTree = "<group>"; };
+		76A183AD2855A43D003D2D6A /* MainVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewController.swift; sourceTree = "<group>"; };
+		76A183AF2855A462003D2D6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		76A183B22855A6AF003D2D6A /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
+		76A183B42855A6BB003D2D6A /* TitleTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldViewModel.swift; sourceTree = "<group>"; };
+		76A183B72855A7D6003D2D6A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		76A183BB2855A800003D2D6A /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		76A183BD2855A93E003D2D6A /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		76A183C02855AB10003D2D6A /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
+		76A183C22855AE7C003D2D6A /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		76A183C52855B328003D2D6A /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
+		76A183C72855B331003D2D6A /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
+		76A183CA2855B702003D2D6A /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -117,6 +141,8 @@
 		76A183A028559A4A003D2D6A /* Ch.3 */ = {
 			isa = PBXGroup;
 			children = (
+				76A183B92855A7EC003D2D6A /* Entity */,
+				76A183B12855A695003D2D6A /* MainViewController */,
 			);
 			path = Ch.3;
 			sourceTree = "<group>";
@@ -134,10 +160,68 @@
 			isa = PBXGroup;
 			children = (
 				76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */,
-				76A183A828559F03003D2D6A /* MainViewModel.swift */,
-				76A183AB2855A121003D2D6A /* MainModel.swift */,
+				76A183A828559F03003D2D6A /* DaumMainViewModel.swift */,
+				76A183AB2855A121003D2D6A /* DaumMainModel.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		76A183B12855A695003D2D6A /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76A183AD2855A43D003D2D6A /* MainVIewController.swift */,
+				76A183AF2855A462003D2D6A /* MainViewModel.swift */,
+				76A183CA2855B702003D2D6A /* MainModel.swift */,
+				76A183B62855A6BE003D2D6A /* TitleTextFieldCell */,
+				76A183BF2855AAD6003D2D6A /* CategoryViewController */,
+				76A183C42855B2D8003D2D6A /* PriceTextFieldCell */,
+				76A183C92855B339003D2D6A /* DetailWriteFormCell */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		76A183B62855A6BE003D2D6A /* TitleTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				76A183B22855A6AF003D2D6A /* TitleTextFieldCell.swift */,
+				76A183B42855A6BB003D2D6A /* TitleTextFieldViewModel.swift */,
+			);
+			path = TitleTextFieldCell;
+			sourceTree = "<group>";
+		};
+		76A183B92855A7EC003D2D6A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				76A183B72855A7D6003D2D6A /* Category.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		76A183BF2855AAD6003D2D6A /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76A183BB2855A800003D2D6A /* CategoryViewModel.swift */,
+				76A183BD2855A93E003D2D6A /* CategoryListViewController.swift */,
+			);
+			path = CategoryViewController;
+			sourceTree = "<group>";
+		};
+		76A183C42855B2D8003D2D6A /* PriceTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				76A183C02855AB10003D2D6A /* PriceTextFieldCellViewModel.swift */,
+				76A183C22855AE7C003D2D6A /* PriceTextFieldCell.swift */,
+			);
+			path = PriceTextFieldCell;
+			sourceTree = "<group>";
+		};
+		76A183C92855B339003D2D6A /* DetailWriteFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				76A183C52855B328003D2D6A /* DetailWriteFormCell.swift */,
+				76A183C72855B331003D2D6A /* DetailWriteFormCellViewModel.swift */,
+			);
+			path = DetailWriteFormCell;
 			sourceTree = "<group>";
 		};
 		76C0F8D4282D4F6200DBD019 /* Common */ = {
@@ -418,12 +502,17 @@
 				76ECD6EE27EF5D21002B473C /* AppDelegate.swift in Sources */,
 				76E0D701284DBF2200611955 /* DKBlog.swift in Sources */,
 				76E0D704284DC0E200611955 /* SearchBlogAPI.swift in Sources */,
+				76A183BE2855A93E003D2D6A /* CategoryListViewController.swift in Sources */,
 				760C973227F0C0420051F8BF /* ListModel.swift in Sources */,
-				76A183A928559F03003D2D6A /* MainViewModel.swift in Sources */,
+				76A183A928559F03003D2D6A /* DaumMainViewModel.swift in Sources */,
 				76E0D6E0284CF47400611955 /* BlogListCell.swift in Sources */,
+				76A183B82855A7D6003D2D6A /* Category.swift in Sources */,
 				76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */,
+				76A183B02855A462003D2D6A /* MainViewModel.swift in Sources */,
 				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
+				76A183C12855AB10003D2D6A /* PriceTextFieldCellViewModel.swift in Sources */,
 				76E0D6E7284CFBDB00611955 /* AlertActionConvertible.swift in Sources */,
+				76A183CB2855B702003D2D6A /* MainModel.swift in Sources */,
 				76E0D6DC284CF42100611955 /* BlogListCellData.swift in Sources */,
 				76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */,
 				76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */,
@@ -433,14 +522,21 @@
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
 				76E0D6DA284CF40200611955 /* BlogList.swift in Sources */,
 				76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */,
+				76A183C82855B331003D2D6A /* DetailWriteFormCellViewModel.swift in Sources */,
+				76A183AE2855A43D003D2D6A /* MainVIewController.swift in Sources */,
 				76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
+				76A183BC2855A800003D2D6A /* CategoryViewModel.swift in Sources */,
+				76A183B52855A6BB003D2D6A /* TitleTextFieldViewModel.swift in Sources */,
 				760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */,
-				76A183AC2855A121003D2D6A /* MainModel.swift in Sources */,
+				76A183AC2855A121003D2D6A /* DaumMainModel.swift in Sources */,
+				76A183C62855B328003D2D6A /* DetailWriteFormCell.swift in Sources */,
 				76E0D6D8284CF09F00611955 /* FilterView.swift in Sources */,
 				76E0D707284DC17100611955 /* SearchBlogNetwork.swift in Sources */,
+				76A183B32855A6AF003D2D6A /* TitleTextFieldCell.swift in Sources */,
 				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,
+				76A183C32855AE7C003D2D6A /* PriceTextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

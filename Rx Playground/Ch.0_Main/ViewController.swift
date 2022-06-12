@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         "0_1. Prefetch",
         "0_2. Views & Control",
         "1. Github",
-        "2. Daum"
+        "2. Daum",
+        "3. 중고거래 글쓰기"
     ]
     
     private let naviBarView = UIView().then {
@@ -100,9 +101,15 @@ extension ViewController: UITableViewDelegate {
             
         case 3:
             let daumVC = DaumMainViewController()
-            let rootViewModel = MainViewModel()
+            let rootViewModel = DaumMainViewModel()
             daumVC.bind(rootViewModel)
             self.navigationController?.pushViewController(daumVC, animated: true)
+            
+        case 4:
+            let userGoodsUploadVC = MainViewController()
+            let userGoodsUploadViewModel = MainViewModel()
+            userGoodsUploadVC.bind(userGoodsUploadViewModel)
+            self.navigationController?.pushViewController(userGoodsUploadVC, animated: true)
         default:
             break
         }

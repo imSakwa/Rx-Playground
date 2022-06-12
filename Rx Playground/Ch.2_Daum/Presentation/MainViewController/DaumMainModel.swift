@@ -7,7 +7,7 @@
 
 import RxSwift
 
-struct MainModel {
+struct DaumMainModel {
     let network = SearchBlogNetwork()
     
     func searchBlog(_ query: String) -> Single<Result<DKBlog, SearchNetworkError>> {

@@ -8,7 +8,7 @@
 import RxCocoa
 import RxSwift
 
-struct MainViewModel {
+struct DaumMainViewModel {
     let disposeBag = DisposeBag()
     
     let blogListViewModel = BlogListViewModel()
@@ -17,7 +17,7 @@ struct MainViewModel {
     let alertActionTapped = PublishRelay<DaumMainViewController.AlertAction>()
     let shouldPresentAlert: Signal<DaumMainViewController.Alert>
     
-    init(model: MainModel = MainModel()) {
+    init(model: DaumMainModel = DaumMainModel()) {
         
         let blogResult = searchBarViewModel.shouldLoadResult
             .flatMapLatest(model.searchBlog)
