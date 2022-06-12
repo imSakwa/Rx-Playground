@@ -10,6 +10,11 @@
 		256B70799776AC2FB633AB1F /* Pods_Rx_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188D6FC627014169E350E5FC /* Pods_Rx_Playground.framework */; };
 		760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C972D27F0B2270051F8BF /* ListTableViewCell.swift */; };
 		760C973227F0C0420051F8BF /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C973127F0C0420051F8BF /* ListModel.swift */; };
+		76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */; };
+		76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A328559E20003D2D6A /* FilterViewModel.swift */; };
+		76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A628559E7D003D2D6A /* BlogListViewModel.swift */; };
+		76A183A928559F03003D2D6A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A828559F03003D2D6A /* MainViewModel.swift */; };
+		76A183AC2855A121003D2D6A /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183AB2855A121003D2D6A /* MainModel.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
@@ -39,6 +44,11 @@
 		4CFD937D61C2DCBC3324A960 /* Pods-Rx Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Playground.debug.xcconfig"; path = "Target Support Files/Pods-Rx Playground/Pods-Rx Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		760C972D27F0B2270051F8BF /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		760C973127F0C0420051F8BF /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		76A183A328559E20003D2D6A /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		76A183A628559E7D003D2D6A /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
+		76A183A828559F03003D2D6A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		76A183AB2855A121003D2D6A /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -104,6 +114,32 @@
 			path = Ch.0_Main;
 			sourceTree = "<group>";
 		};
+		76A183A028559A4A003D2D6A /* Ch.3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ch.3;
+			sourceTree = "<group>";
+		};
+		76A183A528559E27003D2D6A /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D6D7284CF09F00611955 /* FilterView.swift */,
+				76A183A328559E20003D2D6A /* FilterViewModel.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		76A183AA28559F0F003D2D6A /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */,
+				76A183A828559F03003D2D6A /* MainViewModel.swift */,
+				76A183AB2855A121003D2D6A /* MainModel.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		76C0F8D4282D4F6200DBD019 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +172,7 @@
 		76E0D6DD284CF42800611955 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */,
+				76A183AA28559F0F003D2D6A /* MainViewController */,
 				76E0D6E2284CFB0000611955 /* SubComponents */,
 			);
 			path = Presentation;
@@ -165,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				76E0D6D9284CF40200611955 /* BlogList.swift */,
+				76A183A628559E7D003D2D6A /* BlogListViewModel.swift */,
 				76E0D6E5284CFB3500611955 /* SubComponents */,
 			);
 			path = BlogListView;
@@ -174,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				76E0D6D5284CECA200611955 /* SearchBar.swift */,
+				76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */,
 			);
 			path = SearchBar;
 			sourceTree = "<group>";
@@ -181,7 +219,7 @@
 		76E0D6E5284CFB3500611955 /* SubComponents */ = {
 			isa = PBXGroup;
 			children = (
-				76E0D6D7284CF09F00611955 /* FilterView.swift */,
+				76A183A528559E27003D2D6A /* FilterView */,
 				76E0D6DF284CF47400611955 /* BlogListCell.swift */,
 			);
 			path = SubComponents;
@@ -234,6 +272,7 @@
 				76E0D6CE2844D9DE00611955 /* Ch.0-2_Button */,
 				760C972F27F0B42D0051F8BF /* Ch.1_Github */,
 				76E0D6D1284BA6C300611955 /* Ch.2_Daum */,
+				76A183A028559A4A003D2D6A /* Ch.3 */,
 				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
 				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
 				76E3CA9C283133A900CB4F10 /* Subject.playground */,
@@ -380,20 +419,25 @@
 				76E0D701284DBF2200611955 /* DKBlog.swift in Sources */,
 				76E0D704284DC0E200611955 /* SearchBlogAPI.swift in Sources */,
 				760C973227F0C0420051F8BF /* ListModel.swift in Sources */,
+				76A183A928559F03003D2D6A /* MainViewModel.swift in Sources */,
 				76E0D6E0284CF47400611955 /* BlogListCell.swift in Sources */,
+				76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */,
 				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
 				76E0D6E7284CFBDB00611955 /* AlertActionConvertible.swift in Sources */,
 				76E0D6DC284CF42100611955 /* BlogListCellData.swift in Sources */,
+				76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */,
 				76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */,
 				76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */,
 				76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */,
 				76E0D6D6284CECA200611955 /* SearchBar.swift in Sources */,
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
 				76E0D6DA284CF40200611955 /* BlogList.swift in Sources */,
+				76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */,
 				76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
 				760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */,
+				76A183AC2855A121003D2D6A /* MainModel.swift in Sources */,
 				76E0D6D8284CF09F00611955 /* FilterView.swift in Sources */,
 				76E0D707284DC17100611955 /* SearchBlogNetwork.swift in Sources */,
 				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,

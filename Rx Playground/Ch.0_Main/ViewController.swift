@@ -100,6 +100,8 @@ extension ViewController: UITableViewDelegate {
             
         case 3:
             let daumVC = DaumMainViewController()
+            let rootViewModel = MainViewModel()
+            daumVC.bind(rootViewModel)
             self.navigationController?.pushViewController(daumVC, animated: true)
         default:
             break

@@ -15,14 +15,12 @@ class DaumMainViewController: UIViewController {
     private let listView = BlogListView()
     private let searchBar = SearchBar()
     
-    private let alertActionTapped = PublishRelay<AlertAction>()
     
     private var currentPage: Int = 2
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        bind()
         attribute()
         layout()
     }
@@ -31,102 +29,17 @@ class DaumMainViewController: UIViewController {
         fatalError("에러")
     }
     
-    private func bind() {
-        // UI 컨트롤러와 컴포넌트들 바인딩하는 작업
-        let blogResult = searchBar.shouldLoadResult
-            .flatMapLatest { query in
-                SearchBlogNetwork().searchBlog(query: query)
-            }
-            .share()
+    func bind(_ viewModel: MainViewModel) {
+        listView.bind(viewModel.blogListViewModel)
+        searchBar.bind(viewModel.searchBarViewModel)
         
-        let blogValue = blogResult
-            .compactMap { data -> DKBlog? in
-                guard case .success(let value) = data else { return nil }
-                return value
-            }
         
-        let blogError = blogResult
-            .compactMap { data -> String? in
-                guard case .failure(let error) = data else { return nil }
-                return error.localizedDescription
-            }
-        
-        // 네트워크를 통해 가져온 값ㅇ르 cellData로 변환
-        let cellData = blogValue
-            .map { blog -> [BlogListCellData] in
-                return blog.documents
-                    .map { doc in
-                        let thumbnailURL = URL(string: doc.thumbnail ?? "")
-                        return BlogListCellData(thumnailURL: thumbnailURL, name: doc.name, title: doc.title, datetime: doc.datetime)
-                    }
-            }
-        
-        let currentPage = blogValue
-            .map { blog -> Int in
-                return blog.meta.pageCnt ?? -1
-            }
-        
-        listView.rx.prefetchRows
-            .compactMap(\.last?.row)
-            .withUnretained(self)
-            .bind { ss, row in
-//                guard row == cellData.count - 1 else { return }
-                SearchBlogNetwork().searchBlog(query: "Rxswift", page: 2)
-            }
-        
-        // FilterView를 선택했을 때 나오는 alertSheet를 선택했을 때 type
-        let sortedType = alertActionTapped
-            .filter {
-                switch $0 {
-                case .title, .datetime:
-                    return true
-                default:
-                    return false
-                }
-            }
-            .startWith(.title)
-        
-        // MainVC 에서 ListView로 전달하기
-        Observable
-            .combineLatest(sortedType, cellData) { type, data -> [BlogListCellData] in
-                switch type {
-                case .title:
-                    return data.sorted { $0.title ?? "" < $1.title ?? "" }
-                case .datetime:
-                    return data.sorted { $0.datetime ?? Date() > $1.datetime ?? Date() }
-                default:
-                    return data
-                }
-            }
-            .bind(to: listView.cellData)
-            .disposed(by: disposeBag)
-        
-        let alertSheetForSorting = listView.headerView.sortButtonTapped
-            .map { _ -> Alert in
-                return (title: nil, message: nil, actions: [.title, .datetime, .cancel], style: .actionSheet)
-            }
-        
-        let alertForErrorMessage = blogError
-            .map { message -> Alert in
-                return (
-                    title: "앗!",
-                    message: "오류 발생. \(message)",
-                    actions: [.confirm],
-                    style: .alert
-                )
-            }
-        
-        Observable
-            .merge(
-                alertForErrorMessage,
-                alertSheetForSorting
-            )
-            .asSignal(onErrorSignalWith: .empty())
+        viewModel.shouldPresentAlert
             .flatMapLatest { alert -> Signal<AlertAction> in
                 let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
                 return self.presentAlertController(alertController, actions: alert.actions)
             }
-            .emit(to: alertActionTapped)
+            .emit(to: viewModel.alertActionTapped)
             .disposed(by: disposeBag)
         
     }
