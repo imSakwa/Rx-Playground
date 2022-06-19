@@ -63,6 +63,9 @@
 		76A4D09F285F3E6600DCC34C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D09E285F3E6600DCC34C /* libc++.tbd */; };
 		76A4D0A1285F3E7700DCC34C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D0A0285F3E7700DCC34C /* libxml2.tbd */; };
 		76A4D0A3285F3E7F00DCC34C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D0A2285F3E7F00DCC34C /* libsqlite3.tbd */; };
+		76A4D0A7285F405300DCC34C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0A6285F405300DCC34C /* LocationData.swift */; };
+		76A4D0A9285F409300DCC34C /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0A8285F409300DCC34C /* KLDocument.swift */; };
+		76A4D0AB285F414500DCC34C /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0AA285F414500DCC34C /* DetailListCellData.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
@@ -154,6 +157,9 @@
 		76A4D09E285F3E6600DCC34C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		76A4D0A0285F3E7700DCC34C /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		76A4D0A2285F3E7F00DCC34C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		76A4D0A6285F405300DCC34C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		76A4D0A8285F409300DCC34C /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		76A4D0AA285F414500DCC34C /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -334,6 +340,7 @@
 		76A4D04F285F36E900DCC34C /* Ch.1 */ = {
 			isa = PBXGroup;
 			children = (
+				76A4D0A5285F403000DCC34C /* Entities */,
 				76A4D050285F3CB800DCC34C /* FindCVSViewController.swift */,
 			);
 			path = Ch.1;
@@ -396,6 +403,29 @@
 				76A4D06B285F3DC300DCC34C /* MTMapCircle.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		76A4D0A4285F400400DCC34C /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
+				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
+				76E3CA9C283133A900CB4F10 /* Subject.playground */,
+				76E3CA9D28313AD000CB4F10 /* FilteringOperators.playground */,
+				76E3CA9E283140F200CB4F10 /* TransformingOperators.playground */,
+				76E0D6D2284C8BF600611955 /* CombiningOperators.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		76A4D0A5285F403000DCC34C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				76A4D0A6285F405300DCC34C /* LocationData.swift */,
+				76A4D0A8285F409300DCC34C /* KLDocument.swift */,
+				76A4D0AA285F414500DCC34C /* DetailListCellData.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		76C0F8D4282D4F6200DBD019 /* Common */ = {
@@ -525,18 +555,13 @@
 			children = (
 				76A4D095285F3DE800DCC34C /* BridgingHeader.h */,
 				76ECD6FB27EF5D21002B473C /* Info.plist */,
+				76A4D0A4285F400400DCC34C /* Playgrounds */,
 				76C0F8D4282D4F6200DBD019 /* Common */,
 				760C973027F0B4730051F8BF /* Ch.0_Main */,
 				76E3CAA3283A6C3D00CB4F10 /* Ch.0-1_Prefetch */,
 				76E0D6CE2844D9DE00611955 /* Ch.0-2_Button */,
 				76A4D04E285F110F00DCC34C /* Part4 */,
 				76A4D04D285F10FE00DCC34C /* Part5 */,
-				76E3CA9A282FF2E900CB4F10 /* Observable.playground */,
-				76E3CA9B28312A9200CB4F10 /* Traits.playground */,
-				76E3CA9C283133A900CB4F10 /* Subject.playground */,
-				76E3CA9D28313AD000CB4F10 /* FilteringOperators.playground */,
-				76E3CA9E283140F200CB4F10 /* TransformingOperators.playground */,
-				76E0D6D2284C8BF600611955 /* CombiningOperators.playground */,
 			);
 			path = "Rx Playground";
 			sourceTree = "<group>";
@@ -718,9 +743,11 @@
 				76A183B82855A7D6003D2D6A /* Category.swift in Sources */,
 				76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */,
 				76A183B02855A462003D2D6A /* MainViewModel.swift in Sources */,
+				76A4D0A9285F409300DCC34C /* KLDocument.swift in Sources */,
 				76E69019283BC27500248EC8 /* PrefetchTableViewCell.swift in Sources */,
 				76A183C12855AB10003D2D6A /* PriceTextFieldCellViewModel.swift in Sources */,
 				76E0D6E7284CFBDB00611955 /* AlertActionConvertible.swift in Sources */,
+				76A4D0A7285F405300DCC34C /* LocationData.swift in Sources */,
 				76A183CB2855B702003D2D6A /* MainModel.swift in Sources */,
 				76E0D6DC284CF42100611955 /* BlogListCellData.swift in Sources */,
 				76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */,
@@ -744,6 +771,7 @@
 				76A183C62855B328003D2D6A /* DetailWriteFormCell.swift in Sources */,
 				76E0D6D8284CF09F00611955 /* FilterView.swift in Sources */,
 				76E0D707284DC17100611955 /* SearchBlogNetwork.swift in Sources */,
+				76A4D0AB285F414500DCC34C /* DetailListCellData.swift in Sources */,
 				76A183B32855A6AF003D2D6A /* TitleTextFieldCell.swift in Sources */,
 				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,
 				76A183C32855AE7C003D2D6A /* PriceTextFieldCell.swift in Sources */,
