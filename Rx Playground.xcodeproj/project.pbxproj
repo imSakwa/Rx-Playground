@@ -66,6 +66,8 @@
 		76A4D0A7285F405300DCC34C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0A6285F405300DCC34C /* LocationData.swift */; };
 		76A4D0A9285F409300DCC34C /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0A8285F409300DCC34C /* KLDocument.swift */; };
 		76A4D0AB285F414500DCC34C /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0AA285F414500DCC34C /* DetailListCellData.swift */; };
+		76A4D0AE285F44D500DCC34C /* FindCVSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0AD285F44D500DCC34C /* FindCVSViewModel.swift */; };
+		76A4D0B0285F6A3500DCC34C /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0AF285F6A3500DCC34C /* MTMapViewError.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
@@ -160,6 +162,8 @@
 		76A4D0A6285F405300DCC34C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		76A4D0A8285F409300DCC34C /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		76A4D0AA285F414500DCC34C /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		76A4D0AD285F44D500DCC34C /* FindCVSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCVSViewModel.swift; sourceTree = "<group>"; };
+		76A4D0AF285F6A3500DCC34C /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -340,8 +344,8 @@
 		76A4D04F285F36E900DCC34C /* Ch.1 */ = {
 			isa = PBXGroup;
 			children = (
+				76A4D0AC285F44AF00DCC34C /* Presentation */,
 				76A4D0A5285F403000DCC34C /* Entities */,
-				76A4D050285F3CB800DCC34C /* FindCVSViewController.swift */,
 			);
 			path = Ch.1;
 			sourceTree = "<group>";
@@ -421,11 +425,21 @@
 		76A4D0A5285F403000DCC34C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				76A4D0AF285F6A3500DCC34C /* MTMapViewError.swift */,
 				76A4D0A6285F405300DCC34C /* LocationData.swift */,
 				76A4D0A8285F409300DCC34C /* KLDocument.swift */,
 				76A4D0AA285F414500DCC34C /* DetailListCellData.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		76A4D0AC285F44AF00DCC34C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				76A4D050285F3CB800DCC34C /* FindCVSViewController.swift */,
+				76A4D0AD285F44D500DCC34C /* FindCVSViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		76C0F8D4282D4F6200DBD019 /* Common */ = {
@@ -762,9 +776,11 @@
 				76A183C82855B331003D2D6A /* DetailWriteFormCellViewModel.swift in Sources */,
 				76A183AE2855A43D003D2D6A /* MainVIewController.swift in Sources */,
 				76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */,
+				76A4D0AE285F44D500DCC34C /* FindCVSViewModel.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
 				76A183BC2855A800003D2D6A /* CategoryViewModel.swift in Sources */,
+				76A4D0B0285F6A3500DCC34C /* MTMapViewError.swift in Sources */,
 				76A183B52855A6BB003D2D6A /* TitleTextFieldViewModel.swift in Sources */,
 				760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */,
 				76A183AC2855A121003D2D6A /* DaumMainModel.swift in Sources */,

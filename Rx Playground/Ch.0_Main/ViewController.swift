@@ -13,12 +13,16 @@ import Then
 
 class ViewController: UIViewController {
 
-    let itemArr: [String] = [
+    let itemArr1: [String] = [
         "0_1. Prefetch",
         "0_2. Views & Control",
         "1. Github",
         "2. Daum",
         "3. 중고거래 글쓰기"
+    ]
+    
+    let itemArr2: [String] = [
+        "1. KakaoMap",
     ]
     
     private let naviBarView = UIView().then {
@@ -76,9 +80,9 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "예제"
+            return "Part 4"
         case 1:
-            return "이론"
+            return "Part 5"
         default:
             return ""
         }
@@ -86,49 +90,74 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.row {
-        case 0:
-            let prefetchVC = PrefetchViewController()
-            self.navigationController?.pushViewController(prefetchVC, animated: true)
-            
-        case 1:
-            let testButtonVC = TestButtonViewController()
-            self.navigationController?.pushViewController(testButtonVC, animated: true)
-            
-        case 2:
-            let githubVC = GithubViewController()
-            self.navigationController?.pushViewController(githubVC, animated: true)
-            
-        case 3:
-            let daumVC = DaumMainViewController()
-            let rootViewModel = DaumMainViewModel()
-            daumVC.bind(rootViewModel)
-            self.navigationController?.pushViewController(daumVC, animated: true)
-            
-        case 4:
-            let userGoodsUploadVC = MainViewController()
-            let userGoodsUploadViewModel = MainViewModel()
-            userGoodsUploadVC.bind(userGoodsUploadViewModel)
-            self.navigationController?.pushViewController(userGoodsUploadVC, animated: true)
-        default:
-            break
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 0:
+                let prefetchVC = PrefetchViewController()
+                self.navigationController?.pushViewController(prefetchVC, animated: true)
+                
+            case 1:
+                let testButtonVC = TestButtonViewController()
+                self.navigationController?.pushViewController(testButtonVC, animated: true)
+                
+            case 2:
+                let githubVC = GithubViewController()
+                self.navigationController?.pushViewController(githubVC, animated: true)
+                
+            case 3:
+                let daumVC = DaumMainViewController()
+                let rootViewModel = DaumMainViewModel()
+                daumVC.bind(rootViewModel)
+                self.navigationController?.pushViewController(daumVC, animated: true)
+                
+            case 4:
+                let userGoodsUploadVC = MainViewController()
+                let userGoodsUploadViewModel = MainViewModel()
+                userGoodsUploadVC.bind(userGoodsUploadViewModel)
+                self.navigationController?.pushViewController(userGoodsUploadVC, animated: true)
+            default:
+                break
+            }
+        } else if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                let findCVSVC = FindCVSViewController()
+                let findCVSViewModel = FindCVSViewModel()
+                findCVSVC.bind(findCVSViewModel)
+                self.navigationController?.pushViewController(findCVSVC, animated: true)
+                
+            default:
+                break
+            }
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemArr.count
+        switch section {
+        case 0:
+            return itemArr1.count
+        case 1:
+            return itemArr2.count
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         
-        cell.titleLbl.text = itemArr[indexPath.row]
+        if indexPath.section == 0 {
+            cell.titleLbl.text = itemArr1[indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.titleLbl.text = itemArr2[indexPath.row]
+        }
+        
         return cell
     }
     
