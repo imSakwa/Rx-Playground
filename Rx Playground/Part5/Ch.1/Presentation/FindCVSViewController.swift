@@ -15,9 +15,10 @@ class FindCVSViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     private let locationManager = CLLocationManager()
-    private let mapView = MTMapView()
+    let mapView = MTMapView()
     private let currentLocationButton = UIButton()
-    private let detailList = UITableView()
+    let detailList = UITableView()
+    private let detailListBackgroundView = DetailListBackgroundView()
     private let viewModel = FindCVSViewModel()
     
     override func viewDidLoad() {
@@ -32,12 +33,37 @@ class FindCVSViewController: UIViewController {
     }
     
     private func bind(_ viewModel: FindCVSViewModel) {
+        detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
+        
         viewModel.setMapCenter
             .emit(to: mapView.rx.setMapCenterPoint)
             .disposed(by: disposeBag)
         
         viewModel.errorMessage
-            .emit(to: )
+            .emit(to: self.rx.presentAlert)
+            .disposed(by: disposeBag)
+        
+        viewModel.detailListCellData
+            .drive(detailList.rx.items) { tv, row, data in
+                let cell = tv.dequeueReusableCell(withIdentifier: "DetailListCell", for: IndexPath(row: row, section: 0)) as! DetailListCell
+                cell.setData(data)
+                
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.detailListCellData
+            .map { $0.compactMap { $0.point }}
+            .drive(self.rx.addPOIItem)
+            .disposed(by: disposeBag)
+        
+        viewModel.scrollToSelectedLocation
+            .emit(to: self.rx.showSelectedLocation)
+            .disposed(by: disposeBag)
+        
+        detailList.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.detailListItemSelected)
             .disposed(by: disposeBag)
         
         currentLocationButton.rx.tap
@@ -54,6 +80,10 @@ class FindCVSViewController: UIViewController {
         currentLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
         currentLocationButton.backgroundColor = .white
         currentLocationButton.layer.cornerRadius = 20
+        
+        detailList.register(DetailListCell.self, forCellReuseIdentifier: "DetailListCell")
+        detailList.separatorStyle = .none
+        detailList.backgroundView = detailListBackgroundView
     }
     
     private func layout() {
@@ -137,4 +167,32 @@ extension Reactive where Base: FindCVSViewController {
             base.present(alertController, animated: true)
         }
     }
+    
+    var showSelectedLocation: Binder<Int> {
+        return Binder(base) { base, row in
+            let indexPath = IndexPath(row: row, section: 0)
+            
+            base.detailList.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+        }
+    }
+    
+    var addPOIItem: Binder<[MTMapPoint]> {
+        return Binder(base) { base, points in
+            let item = points
+                .enumerated()
+                .map { offset, point -> MTMapPOIItem in
+                    let mapPOIItem = MTMapPOIItem()
+                    mapPOIItem.mapPoint = point
+                    mapPOIItem.markerType = .redPin
+                    mapPOIItem.showAnimationType = .springFromGround
+                    mapPOIItem.tag = offset
+                    
+                    return mapPOIItem
+                }
+            
+            base.mapView.removeAllPOIItems()
+            base.mapView.addPOIItems(item)
+        }
+    }
 }
+
