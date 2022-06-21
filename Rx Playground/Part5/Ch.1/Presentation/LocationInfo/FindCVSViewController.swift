@@ -32,7 +32,7 @@ class FindCVSViewController: UIViewController {
         layout()
     }
     
-    private func bind(_ viewModel: FindCVSViewModel) {
+    func bind(_ viewModel: FindCVSViewModel) {
         detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
         
         viewModel.setMapCenter

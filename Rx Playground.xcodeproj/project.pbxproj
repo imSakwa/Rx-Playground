@@ -71,6 +71,9 @@
 		76A4D0B2285F826800DCC34C /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0B1285F826800DCC34C /* DetailListCell.swift */; };
 		76A4D0B4285F84E200DCC34C /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0B3285F84E200DCC34C /* DetailListBackgroundView.swift */; };
 		76A4D0B6285F84EC00DCC34C /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0B5285F84EC00DCC34C /* DetailListBackgroundViewModel.swift */; };
+		76A4D0B92862057D00DCC34C /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0B82862057D00DCC34C /* LocalAPI.swift */; };
+		76A4D0BB2862065D00DCC34C /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0BA2862065D00DCC34C /* LocalNetwork.swift */; };
+		76A4D0BE286207C700DCC34C /* LocationInfomationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4D0BD286207C700DCC34C /* LocationInfomationModel.swift */; };
 		76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C0F8D5282D51A100DBD019 /* GithubViewController.swift */; };
 		76E0D6D02844DA1000611955 /* TestButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */; };
 		76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D6D3284CEBB200611955 /* DaumMainViewController.swift */; };
@@ -170,6 +173,9 @@
 		76A4D0B1285F826800DCC34C /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		76A4D0B3285F84E200DCC34C /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
 		76A4D0B5285F84EC00DCC34C /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
+		76A4D0B82862057D00DCC34C /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		76A4D0BA2862065D00DCC34C /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		76A4D0BD286207C700DCC34C /* LocationInfomationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationModel.swift; sourceTree = "<group>"; };
 		76C0F8D5282D51A100DBD019 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		76E0D6CF2844DA1000611955 /* TestButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonViewController.swift; sourceTree = "<group>"; };
 		76E0D6D2284C8BF600611955 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -350,6 +356,7 @@
 		76A4D04F285F36E900DCC34C /* Ch.1 */ = {
 			isa = PBXGroup;
 			children = (
+				76A4D0B72862057000DCC34C /* Network */,
 				76A4D0AC285F44AF00DCC34C /* Presentation */,
 				76A4D0A5285F403000DCC34C /* Entities */,
 			);
@@ -442,13 +449,31 @@
 		76A4D0AC285F44AF00DCC34C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				76A4D050285F3CB800DCC34C /* FindCVSViewController.swift */,
-				76A4D0AD285F44D500DCC34C /* FindCVSViewModel.swift */,
+				76A4D0BC286207BC00DCC34C /* LocationInfo */,
 				76A4D0B1285F826800DCC34C /* DetailListCell.swift */,
 				76A4D0B3285F84E200DCC34C /* DetailListBackgroundView.swift */,
 				76A4D0B5285F84EC00DCC34C /* DetailListBackgroundViewModel.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		76A4D0B72862057000DCC34C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				76A4D0B82862057D00DCC34C /* LocalAPI.swift */,
+				76A4D0BA2862065D00DCC34C /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		76A4D0BC286207BC00DCC34C /* LocationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				76A4D0BD286207C700DCC34C /* LocationInfomationModel.swift */,
+				76A4D050285F3CB800DCC34C /* FindCVSViewController.swift */,
+				76A4D0AD285F44D500DCC34C /* FindCVSViewModel.swift */,
+			);
+			path = LocationInfo;
 			sourceTree = "<group>";
 		};
 		76C0F8D4282D4F6200DBD019 /* Common */ = {
@@ -783,12 +808,14 @@
 				76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */,
 				76E0D6DA284CF40200611955 /* BlogList.swift in Sources */,
 				76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */,
+				76A4D0BB2862065D00DCC34C /* LocalNetwork.swift in Sources */,
 				76A183C82855B331003D2D6A /* DetailWriteFormCellViewModel.swift in Sources */,
 				76A183AE2855A43D003D2D6A /* MainVIewController.swift in Sources */,
 				76E0D6D4284CEBB200611955 /* DaumMainViewController.swift in Sources */,
 				76A4D0AE285F44D500DCC34C /* FindCVSViewModel.swift in Sources */,
 				76C0F8D6282D51A100DBD019 /* GithubViewController.swift in Sources */,
 				76A4D0B6285F84EC00DCC34C /* DetailListBackgroundViewModel.swift in Sources */,
+				76A4D0B92862057D00DCC34C /* LocalAPI.swift in Sources */,
 				76ECD6F027EF5D21002B473C /* SceneDelegate.swift in Sources */,
 				76A183BC2855A800003D2D6A /* CategoryViewModel.swift in Sources */,
 				76A4D0B0285F6A3500DCC34C /* MTMapViewError.swift in Sources */,
@@ -802,6 +829,7 @@
 				76A4D0AB285F414500DCC34C /* DetailListCellData.swift in Sources */,
 				76A183B32855A6AF003D2D6A /* TitleTextFieldCell.swift in Sources */,
 				76E69017283BC23B00248EC8 /* PhotoViewModel.swift in Sources */,
+				76A4D0BE286207C700DCC34C /* LocationInfomationModel.swift in Sources */,
 				76A183C32855AE7C003D2D6A /* PriceTextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -945,6 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P9MW78T4QB;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",

@@ -145,7 +145,7 @@ extension ViewController: UITableViewDataSource {
         case 1:
             return itemArr2.count
         default:
-            break
+            return 0
         }
     }
     
