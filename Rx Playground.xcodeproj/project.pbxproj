@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		256B70799776AC2FB633AB1F /* Pods_Rx_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188D6FC627014169E350E5FC /* Pods_Rx_Playground.framework */; };
 		760C972E27F0B2270051F8BF /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C972D27F0B2270051F8BF /* ListTableViewCell.swift */; };
 		760C973227F0C0420051F8BF /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C973127F0C0420051F8BF /* ListModel.swift */; };
+		760F8B1828632B170016FE0C /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D078285F3DC300DCC34C /* DaumMap.framework */; };
+		760F8B1B28632B8A0016FE0C /* Pods_Rx_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF98D377E9DD2B7FE8F5AF6 /* Pods_Rx_Playground.framework */; };
+		760F8B1E28632EAE0016FE0C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D098285F3E4700DCC34C /* SystemConfiguration.framework */; };
+		765F59BE28632F9E00B38FE4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765F59BD28632F9E00B38FE4 /* Metal.framework */; };
+		769A0AF5286323A2003C2140 /* LocalNetworkSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A0AF4286323A2003C2140 /* LocalNetworkSub.swift */; };
 		76A183A228559CEB003D2D6A /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */; };
 		76A183A428559E20003D2D6A /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A328559E20003D2D6A /* FilterViewModel.swift */; };
 		76A183A728559E7D003D2D6A /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A183A628559E7D003D2D6A /* BlogListViewModel.swift */; };
@@ -55,9 +59,6 @@
 		76A4D091285F3DC300DCC34C /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A4D075285F3DC300DCC34C /* map_present_background_update.png */; };
 		76A4D092285F3DC300DCC34C /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A4D076285F3DC300DCC34C /* daum_th_line.png */; };
 		76A4D093285F3DC300DCC34C /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A4D077285F3DC300DCC34C /* map_pin_shadow.png */; };
-		76A4D094285F3DC300DCC34C /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D078285F3DC300DCC34C /* DaumMap.framework */; };
-		76A4D097285F3E3F00DCC34C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D096285F3E3F00DCC34C /* OpenGLES.framework */; };
-		76A4D099285F3E4700DCC34C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D098285F3E4700DCC34C /* SystemConfiguration.framework */; };
 		76A4D09B285F3E5100DCC34C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D09A285F3E5100DCC34C /* CoreLocation.framework */; };
 		76A4D09D285F3E5600DCC34C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D09C285F3E5600DCC34C /* QuartzCore.framework */; };
 		76A4D09F285F3E6600DCC34C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A4D09E285F3E6600DCC34C /* libc++.tbd */; };
@@ -86,6 +87,9 @@
 		76E0D701284DBF2200611955 /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D700284DBF2200611955 /* DKBlog.swift */; };
 		76E0D704284DC0E200611955 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D703284DC0E200611955 /* SearchBlogAPI.swift */; };
 		76E0D707284DC17100611955 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D706284DC17100611955 /* SearchBlogNetwork.swift */; };
+		76E11F022863251D00FB938E /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 76E11F012863251D00FB938E /* networkDummy.json */; };
+		76E11F042863257000FB938E /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E11F032863257000FB938E /* Dummy.swift */; };
+		76E11F082863267F00FB938E /* LocationInformationModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E11F072863267F00FB938E /* LocationInformationModelTest.swift */; };
 		76E3CAA0283676F300CB4F10 /* GithubListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CA9F283676F300CB4F10 /* GithubListCell.swift */; };
 		76E3CAA22837D6D000CB4F10 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA12837D6D000CB4F10 /* Repository.swift */; };
 		76E3CAA5283A6C6900CB4F10 /* PrefetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3CAA4283A6C6900CB4F10 /* PrefetchViewController.swift */; };
@@ -96,13 +100,27 @@
 		76ECD6F227EF5D21002B473C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD6F127EF5D21002B473C /* ViewController.swift */; };
 		76ECD6F727EF5D21002B473C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76ECD6F627EF5D21002B473C /* Assets.xcassets */; };
 		76ECD6FA27EF5D21002B473C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76ECD6F827EF5D21002B473C /* LaunchScreen.storyboard */; };
+		B5C89D24207FB6C18CEBBD54 /* Pods_Rx_PlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6BA0D2C9E538A2DD2199A6 /* Pods_Rx_PlaygroundTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		769A0AEF28632377003C2140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76ECD6E227EF5D21002B473C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76ECD6E927EF5D21002B473C;
+			remoteInfo = "Rx Playground";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		188D6FC627014169E350E5FC /* Pods_Rx_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CFD937D61C2DCBC3324A960 /* Pods-Rx Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Playground.debug.xcconfig"; path = "Target Support Files/Pods-Rx Playground/Pods-Rx Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		02CAB7D59566564D36960A2B /* Pods-Rx PlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx PlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-Rx PlaygroundTests/Pods-Rx PlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3302842CD20B93A53920FFF8 /* Pods-Rx Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Playground.release.xcconfig"; path = "Target Support Files/Pods-Rx Playground/Pods-Rx Playground.release.xcconfig"; sourceTree = "<group>"; };
 		760C972D27F0B2270051F8BF /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		760C973127F0C0420051F8BF /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		765F59BD28632F9E00B38FE4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		769A0AEB28632377003C2140 /* Rx PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rx PlaygroundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		769A0AF4286323A2003C2140 /* LocalNetworkSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkSub.swift; sourceTree = "<group>"; };
 		76A183A128559CEB003D2D6A /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		76A183A328559E20003D2D6A /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		76A183A628559E7D003D2D6A /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
@@ -157,7 +175,7 @@
 		76A4D076285F3DC300DCC34C /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
 		76A4D077285F3DC300DCC34C /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
 		76A4D078285F3DC300DCC34C /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
-		76A4D095285F3DE800DCC34C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		76A4D095285F3DE800DCC34C /* Rx_Playground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rx_Playground-Bridging-Header.h"; sourceTree = "<group>"; };
 		76A4D096285F3E3F00DCC34C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		76A4D098285F3E4700DCC34C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		76A4D09A285F3E5100DCC34C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -189,6 +207,9 @@
 		76E0D700284DBF2200611955 /* DKBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
 		76E0D703284DC0E200611955 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
 		76E0D706284DC17100611955 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
+		76E11F012863251D00FB938E /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		76E11F032863257000FB938E /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		76E11F072863267F00FB938E /* LocationInformationModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTest.swift; sourceTree = "<group>"; };
 		76E3CA9A282FF2E900CB4F10 /* Observable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9B28312A9200CB4F10 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76E3CA9C283133A900CB4F10 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -206,23 +227,34 @@
 		76ECD6F627EF5D21002B473C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76ECD6F927EF5D21002B473C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76ECD6FB27EF5D21002B473C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF6CE08FDD77FCD643C5815B /* Pods-Rx Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Playground.release.xcconfig"; path = "Target Support Files/Pods-Rx Playground/Pods-Rx Playground.release.xcconfig"; sourceTree = "<group>"; };
+		771D84BB86C9FEC9E80DD798 /* Pods-Rx Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx Playground.debug.xcconfig"; path = "Target Support Files/Pods-Rx Playground/Pods-Rx Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		7F6BA0D2C9E538A2DD2199A6 /* Pods_Rx_PlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_PlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF98D377E9DD2B7FE8F5AF6 /* Pods_Rx_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BA83C50DDCE0850F722491 /* Pods-Rx PlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx PlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-Rx PlaygroundTests/Pods-Rx PlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		769A0AE828632377003C2140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C89D24207FB6C18CEBBD54 /* Pods_Rx_PlaygroundTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76ECD6E727EF5D21002B473C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76A4D0A3285F3E7F00DCC34C /* libsqlite3.tbd in Frameworks */,
+				765F59BE28632F9E00B38FE4 /* Metal.framework in Frameworks */,
+				760F8B1E28632EAE0016FE0C /* SystemConfiguration.framework in Frameworks */,
 				76A4D0A1285F3E7700DCC34C /* libxml2.tbd in Frameworks */,
 				76A4D09F285F3E6600DCC34C /* libc++.tbd in Frameworks */,
 				76A4D09D285F3E5600DCC34C /* QuartzCore.framework in Frameworks */,
 				76A4D09B285F3E5100DCC34C /* CoreLocation.framework in Frameworks */,
-				76A4D099285F3E4700DCC34C /* SystemConfiguration.framework in Frameworks */,
-				76A4D097285F3E3F00DCC34C /* OpenGLES.framework in Frameworks */,
-				76A4D094285F3DC300DCC34C /* DaumMap.framework in Frameworks */,
-				256B70799776AC2FB633AB1F /* Pods_Rx_Playground.framework in Frameworks */,
+				760F8B1B28632B8A0016FE0C /* Pods_Rx_Playground.framework in Frameworks */,
+				760F8B1828632B170016FE0C /* DaumMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +279,17 @@
 				760C973127F0C0420051F8BF /* ListModel.swift */,
 			);
 			path = Ch.0_Main;
+			sourceTree = "<group>";
+		};
+		769A0AEC28632377003C2140 /* Rx PlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				769A0AF4286323A2003C2140 /* LocalNetworkSub.swift */,
+				76E11F012863251D00FB938E /* networkDummy.json */,
+				76E11F032863257000FB938E /* Dummy.swift */,
+				76E11F072863267F00FB938E /* LocationInformationModelTest.swift */,
+			);
+			path = "Rx PlaygroundTests";
 			sourceTree = "<group>";
 		};
 		76A183A028559A4A003D2D6A /* Ch.3 */ = {
@@ -584,6 +627,7 @@
 			isa = PBXGroup;
 			children = (
 				76ECD6EC27EF5D21002B473C /* Rx Playground */,
+				769A0AEC28632377003C2140 /* Rx PlaygroundTests */,
 				76ECD6EB27EF5D21002B473C /* Products */,
 				839F168B0876AA602583C36D /* Pods */,
 				D5CFA78655542F46C54A2A86 /* Frameworks */,
@@ -594,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				76ECD6EA27EF5D21002B473C /* Rx Playground.app */,
+				769A0AEB28632377003C2140 /* Rx PlaygroundTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -601,7 +646,7 @@
 		76ECD6EC27EF5D21002B473C /* Rx Playground */ = {
 			isa = PBXGroup;
 			children = (
-				76A4D095285F3DE800DCC34C /* BridgingHeader.h */,
+				76A4D095285F3DE800DCC34C /* Rx_Playground-Bridging-Header.h */,
 				76ECD6FB27EF5D21002B473C /* Info.plist */,
 				76A4D0A4285F400400DCC34C /* Playgrounds */,
 				76C0F8D4282D4F6200DBD019 /* Common */,
@@ -617,8 +662,10 @@
 		839F168B0876AA602583C36D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4CFD937D61C2DCBC3324A960 /* Pods-Rx Playground.debug.xcconfig */,
-				BF6CE08FDD77FCD643C5815B /* Pods-Rx Playground.release.xcconfig */,
+				771D84BB86C9FEC9E80DD798 /* Pods-Rx Playground.debug.xcconfig */,
+				3302842CD20B93A53920FFF8 /* Pods-Rx Playground.release.xcconfig */,
+				02CAB7D59566564D36960A2B /* Pods-Rx PlaygroundTests.debug.xcconfig */,
+				E3BA83C50DDCE0850F722491 /* Pods-Rx PlaygroundTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -626,6 +673,7 @@
 		D5CFA78655542F46C54A2A86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				765F59BD28632F9E00B38FE4 /* Metal.framework */,
 				76A4D0A2285F3E7F00DCC34C /* libsqlite3.tbd */,
 				76A4D0A0285F3E7700DCC34C /* libxml2.tbd */,
 				76A4D09E285F3E6600DCC34C /* libc++.tbd */,
@@ -634,7 +682,8 @@
 				76A4D098285F3E4700DCC34C /* SystemConfiguration.framework */,
 				76A4D096285F3E3F00DCC34C /* OpenGLES.framework */,
 				76A4D052285F3DC300DCC34C /* DaumMap.embeddedframework */,
-				188D6FC627014169E350E5FC /* Pods_Rx_Playground.framework */,
+				8CF98D377E9DD2B7FE8F5AF6 /* Pods_Rx_Playground.framework */,
+				7F6BA0D2C9E538A2DD2199A6 /* Pods_Rx_PlaygroundTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -642,15 +691,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		769A0AEA28632377003C2140 /* Rx PlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 769A0AF328632377003C2140 /* Build configuration list for PBXNativeTarget "Rx PlaygroundTests" */;
+			buildPhases = (
+				9EF06637295AFD07FBA5B763 /* [CP] Check Pods Manifest.lock */,
+				769A0AE728632377003C2140 /* Sources */,
+				769A0AE828632377003C2140 /* Frameworks */,
+				769A0AE928632377003C2140 /* Resources */,
+				70A99F6A3D72A19AF562CF18 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				769A0AF028632377003C2140 /* PBXTargetDependency */,
+			);
+			name = "Rx PlaygroundTests";
+			productName = "Rx PlaygroundTests";
+			productReference = 769A0AEB28632377003C2140 /* Rx PlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		76ECD6E927EF5D21002B473C /* Rx Playground */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76ECD6FE27EF5D21002B473C /* Build configuration list for PBXNativeTarget "Rx Playground" */;
 			buildPhases = (
-				13D0B8384D213A441045F614 /* [CP] Check Pods Manifest.lock */,
+				FB43C62307005D397895DDC8 /* [CP] Check Pods Manifest.lock */,
 				76ECD6E627EF5D21002B473C /* Sources */,
 				76ECD6E727EF5D21002B473C /* Frameworks */,
 				76ECD6E827EF5D21002B473C /* Resources */,
-				9BFF6F7259C1CE49E5C2E973 /* [CP] Embed Pods Frameworks */,
+				E98B0DFCA8CED2C03B39022D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -668,9 +737,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					769A0AEA28632377003C2140 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+						TestTargetID = 76ECD6E927EF5D21002B473C;
+					};
 					76ECD6E927EF5D21002B473C = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -690,11 +764,20 @@
 			projectRoot = "";
 			targets = (
 				76ECD6E927EF5D21002B473C /* Rx Playground */,
+				769A0AEA28632377003C2140 /* Rx PlaygroundTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		769A0AE928632377003C2140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E11F022863251D00FB938E /* networkDummy.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76ECD6E827EF5D21002B473C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -734,7 +817,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13D0B8384D213A441045F614 /* [CP] Check Pods Manifest.lock */ = {
+		70A99F6A3D72A19AF562CF18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx PlaygroundTests/Pods-Rx PlaygroundTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx PlaygroundTests/Pods-Rx PlaygroundTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx PlaygroundTests/Pods-Rx PlaygroundTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF06637295AFD07FBA5B763 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx PlaygroundTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E98B0DFCA8CED2C03B39022D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB43C62307005D397895DDC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -756,26 +895,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BFF6F7259C1CE49E5C2E973 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx Playground/Pods-Rx Playground-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		769A0AE728632377003C2140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E11F082863267F00FB938E /* LocationInformationModelTest.swift in Sources */,
+				76E11F042863257000FB938E /* Dummy.swift in Sources */,
+				769A0AF5286323A2003C2140 /* LocalNetworkSub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76ECD6E627EF5D21002B473C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -836,6 +968,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		769A0AF028632377003C2140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76ECD6E927EF5D21002B473C /* Rx Playground */;
+			targetProxy = 769A0AEF28632377003C2140 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		76ECD6F827EF5D21002B473C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -848,6 +988,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		769A0AF128632377003C2140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CAB7D59566564D36960A2B /* Pods-Rx PlaygroundTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9MW78T4QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chagmn.Rx-PlaygroundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx Playground.app/Rx Playground";
+			};
+			name = Debug;
+		};
+		769A0AF228632377003C2140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3BA83C50DDCE0850F722491 /* Pods-Rx PlaygroundTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9MW78T4QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chagmn.Rx-PlaygroundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx Playground.app/Rx Playground";
+			};
+			name = Release;
+		};
 		76ECD6FC27EF5D21002B473C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -966,7 +1161,7 @@
 		};
 		76ECD6FF27EF5D21002B473C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CFD937D61C2DCBC3324A960 /* Pods-Rx Playground.debug.xcconfig */;
+			baseConfigurationReference = 771D84BB86C9FEC9E80DD798 /* Pods-Rx Playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -992,7 +1187,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chagmn.Rx-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/changmin/Documents/Xcode Project/Study/Rx Playground/Rx Playground/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/changmin/Documents/Xcode Project/Study/Rx Playground/Rx Playground/Rx_Playground-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1000,7 +1195,7 @@
 		};
 		76ECD70027EF5D21002B473C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF6CE08FDD77FCD643C5815B /* Pods-Rx Playground.release.xcconfig */;
+			baseConfigurationReference = 3302842CD20B93A53920FFF8 /* Pods-Rx Playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1025,7 +1220,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chagmn.Rx-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/changmin/Documents/Xcode Project/Study/Rx Playground/Rx Playground/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/changmin/Documents/Xcode Project/Study/Rx Playground/Rx Playground/Rx_Playground-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1034,6 +1229,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		769A0AF328632377003C2140 /* Build configuration list for PBXNativeTarget "Rx PlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				769A0AF128632377003C2140 /* Debug */,
+				769A0AF228632377003C2140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		76ECD6E527EF5D21002B473C /* Build configuration list for PBXProject "Rx Playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
